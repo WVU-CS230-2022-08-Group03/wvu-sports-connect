@@ -1,4 +1,5 @@
 # WVU Sports Connect
+----
 
 ### Kanban Board:
 https://trello.com/b/2ERsrt7x/kanban-board
