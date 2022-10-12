@@ -1,4 +1,9 @@
+# ignore host/user specific config
 **/.vscode/
 **/.editorconfig
+
+# ignore cache dir
 **/.angular/
+
+# ignore local pkgs
 **/node_modules/
