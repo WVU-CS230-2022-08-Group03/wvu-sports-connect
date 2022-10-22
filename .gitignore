@@ -1,9 +1,11 @@
 # ignore host/user specific config
 **/.vscode/
 **/.editorconfig
+**/wvu-sports-connect.code-workspace
 
-# ignore cache dir
+# ignore cache and build dirs
 **/.angular/
+**/dist/
 
 # ignore local pkgs
 **/node_modules/
