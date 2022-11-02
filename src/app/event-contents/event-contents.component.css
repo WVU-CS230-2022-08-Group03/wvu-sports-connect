@@ -1,0 +1,28 @@
+.page-link{
+    color: #002855;
+}
+a{
+    text-decoration: none;
+    color: #002855;
+}
+.blog-box{
+    position: relative;
+  
+  border-radius: 10px;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  font-size: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 21px -12px rgba(0, 0, 0, .66);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+p{
+    color: #002855;
+}
+.invis{
+    color: #ddd;
+}
+.post-media {
+    align-content:center;
+}

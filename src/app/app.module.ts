@@ -17,6 +17,11 @@ import { SignUpComponent } from './AccountSystem/sign-up/sign-up.component';
 import { ForgotPasswordComponent } from './AccountSystem/forgot-password/forgot-password.component';
 import { AuthService } from './AccountSystem/shared/services/auth.service';
 import { VerifyEmailComponent } from './AccountSystem/verify-email/verify-email.component';
+import { CreatePostComponent } from './create-post/create-post.component';
+
+import { EventContentsComponent } from './event-contents/event-contents.component';
+
+
 
 
 @NgModule({
@@ -27,7 +32,12 @@ import { VerifyEmailComponent } from './AccountSystem/verify-email/verify-email.
     TopnavbarComponent,
     SignUpComponent,
     ForgotPasswordComponent,
-    VerifyEmailComponent
+    VerifyEmailComponent,
+    CreatePostComponent,
+  
+    EventContentsComponent,
+      
+
 
   ],
   imports: [
