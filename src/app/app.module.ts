@@ -17,6 +17,8 @@ import { SignUpComponent } from './AccountSystem/sign-up/sign-up.component';
 import { ForgotPasswordComponent } from './AccountSystem/forgot-password/forgot-password.component';
 import { AuthService } from './AccountSystem/shared/services/auth.service';
 import { VerifyEmailComponent } from './AccountSystem/verify-email/verify-email.component';
+import { AccountInfoComponent } from './AccountSystem/account-info/account-info.component';
+import { AdminPortalComponent } from './admin-portal/admin-portal.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { VerifyEmailComponent } from './AccountSystem/verify-email/verify-email.
     TopnavbarComponent,
     SignUpComponent,
     ForgotPasswordComponent,
-    VerifyEmailComponent
+    VerifyEmailComponent,
+    AccountInfoComponent,
+    AdminPortalComponent
 
   ],
   imports: [

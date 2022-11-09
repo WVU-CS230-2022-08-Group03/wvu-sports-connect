@@ -1,5 +1,5 @@
 import { Injectable, NgZone } from '@angular/core';
-import { User } from '../services/user';
+import { User } from './user';
 import * as auth from 'firebase/auth';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import {
@@ -35,18 +35,27 @@ export class AuthService {
   SignIn(email: string, password: string) {
     return this.afAuth
       .signInWithEmailAndPassword(email, password)
+
       .then((result) => {
+
         this.SetUserData(result.user);
+
         this.afAuth.authState.subscribe((user) => {
-          if (user) {
+          if (user && user?.email == "admin@gmail.com") {
+            this.router.navigate(['admin-portal']);
+          }
+          else if (user) {
             this.router.navigate(['homepage']);
           }
+          
+
         });
       })
       .catch((error) => {
         window.alert(error.message);
       });
   }
+  
   // Sign up with email/password
   SignUp(email: string, password: string) {
     return this.afAuth
@@ -85,12 +94,12 @@ export class AuthService {
     const user = JSON.parse(localStorage.getItem('user')!);
     return user !== null  ? true : false;
   }
-  // Sign in with Google
-  GoogleAuth() {
-    return this.AuthLogin(new auth.GoogleAuthProvider()).then((res: any) => {
-      this.router.navigate(['homepage']);
-    });
+
+  get isLoggedInAdmin(): boolean {
+    const user = JSON.parse(localStorage.getItem('user')!);
+    return user.email == "admin@gmail.com"
   }
+  
   // Auth logic to run auth providers
   AuthLogin(provider: any) {
     return this.afAuth
