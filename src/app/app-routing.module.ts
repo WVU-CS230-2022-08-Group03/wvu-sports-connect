@@ -6,6 +6,9 @@ import { SignUpComponent } from './AccountSystem/sign-up/sign-up.component';
 import { ForgotPasswordComponent } from './AccountSystem/forgot-password/forgot-password.component';
 
 import { AuthGuard } from './AccountSystem/shared/guard/auth.guard';
+import { AdminGuard } from './AccountSystem/shared/guard/admin.guard';
+import { AccountInfoComponent } from './AccountSystem/account-info/account-info.component';
+import { AdminPortalComponent } from './admin-portal/admin-portal.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/sign-in', pathMatch: 'full' },
@@ -26,6 +29,15 @@ const routes: Routes = [
     path: 'forgot-password',
     component: ForgotPasswordComponent
   },
+  {
+    path: 'account-info',
+    component: AccountInfoComponent,  canActivate: [AuthGuard]
+  },
+  {
+    path: 'admin-portal',
+    component: AdminPortalComponent,  canActivate: [AdminGuard]
+  },
+
 ]
 
 @NgModule({
