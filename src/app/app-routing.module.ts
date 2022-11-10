@@ -9,6 +9,8 @@ import { AuthGuard } from './AccountSystem/shared/guard/auth.guard';
 import { AdminGuard } from './AccountSystem/shared/guard/admin.guard';
 import { AccountInfoComponent } from './AccountSystem/account-info/account-info.component';
 import { AdminPortalComponent } from './admin-portal/admin-portal.component';
+import { EventContentsComponent } from './event-contents/event-contents.component';
+import { CreatePostComponent } from './create-post/create-post.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/sign-in', pathMatch: 'full' },
@@ -37,6 +39,15 @@ const routes: Routes = [
     path: 'admin-portal',
     component: AdminPortalComponent,  canActivate: [AdminGuard]
   },
+  {
+    path: 'events',
+    component: EventContentsComponent,  canActivate: [AuthGuard]
+  },
+  {
+    path: 'create-post',
+    component: CreatePostComponent,  canActivate: [AuthGuard]
+  },
+
 
 ]
 
