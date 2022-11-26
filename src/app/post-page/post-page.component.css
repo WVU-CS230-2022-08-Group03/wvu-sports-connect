@@ -1,0 +1,106 @@
+p {
+    margin: 0;
+}
+
+div.content-super {
+    background-color: rgba(20, 20, 20);
+    width: 100vw;
+    min-height: 94.5vh;
+}
+
+div.content {
+    background-color: rgba(120, 150, 100, 0.5);
+    min-height: 94.5vh;
+    min-width: 500px;
+    width: 65vw;
+    overflow: hidden;
+    margin: 0 auto 0 auto;
+}
+
+div.posts-title {
+    padding: 0 10% 0 10%;
+    margin-top: 2vh;
+}
+
+div.posts-title-h {
+    padding: 0 1% 0 1%;
+}
+
+div.posts-title-h h2 {
+    margin: 0;
+}
+
+div.posts-prvw {
+    padding: 0 1% 0 1%;
+    margin-top: 2vh;
+}
+
+.posts-card-theme {
+    border-radius: 0.7rem;
+    background-color: rgba(48, 48, 48);
+}
+
+div.posts-prvw-card {
+    min-height: 800px;
+    height: 75vh;
+}
+
+div.post-prvw {
+    height: 16.5%;
+    border-radius: 1rem;
+    background-color: #FFE066;
+}
+
+div.posts-prvw-body {
+    overflow: hidden;
+    height: 10%;
+}
+
+.prvw-p-evt {
+    font-size: 13px;
+}
+
+.prvw-p-stat {
+    float: right;
+}
+
+div.evt-info {
+    width: 40%;
+}
+
+div.evt-st {
+    overflow: hidden;
+    float: right;
+    width: 30%;
+}
+
+div.evt-loc {
+    float: left;
+    margin: 0 0 10px 0;
+}
+
+div.evt-time {
+    float: left;
+}
+
+div.ptitle {
+}
+
+div.post-info {
+    width: 40%;
+}
+
+div.stats-info {
+    width: 20%;
+}
+
+div.stats-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+div.ptitle,div.host {
+    display: flex;
+    justify-content: center;
+}

@@ -22,7 +22,9 @@ import { CreatePostComponent } from './create-post/create-post.component';
 import { HttpClientModule  } from '@angular/common/http';
 import { EventBackendComponent } from './event-backend/event-backend.component';
 import { EventPageComponent } from './event-page/event-page.component';
-
+import { PostComponent } from './post/post.component';
+import { PostPageComponent } from './post-page/post-page.component';
+import { PostPreviewComponent } from './post-page/post-preview/post-preview.component';
 
 @NgModule({
   declarations: [
@@ -36,14 +38,13 @@ import { EventPageComponent } from './event-page/event-page.component';
     AccountInfoComponent,
     AdminPortalComponent,
     CreatePostComponent,
-       EventBackendComponent,
-       EventPageComponent,
-      
-
-
+    EventBackendComponent,
+    EventPageComponent,
+    PostComponent,
+    PostPageComponent,
+    PostPreviewComponent
   ],
   imports: [
-    
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),

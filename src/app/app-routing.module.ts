@@ -10,44 +10,70 @@ import { AccountInfoComponent } from './account-system/account-info/account-info
 import { AdminPortalComponent } from './admin-portal/admin-portal.component';
 import { CreatePostComponent } from './create-post/create-post.component';
 import { EventPageComponent } from './event-page/event-page.component';
-
+import { PostPageComponent } from './post-page/post-page.component';
+import { PostComponent } from './post/post.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/sign-in', pathMatch: 'full'
+    redirectTo: 'home', pathMatch: 'full'
   },
   {
-    path:'homepage',
-    component: HomepageComponent,  canActivate: [AuthGuard]
+    path:'home',
+    component: HomepageComponent,
+    pathMatch: 'full',
+    canActivate: [AuthGuard]
   },
   {
     path: 'sign-in',
-    component: LoginpageComponent
+    component: LoginpageComponent,
+    pathMatch: 'full'
   },
   {
     path: 'sign-up',
-    component: SignUpComponent
+    component: SignUpComponent,
+    pathMatch: 'full'
   },
   {
     path: 'forgot-password',
-    component: ForgotPasswordComponent
+    component: ForgotPasswordComponent,
+    pathMatch: 'full'
   },
   {
     path: 'account-info',
-    component: AccountInfoComponent,  canActivate: [AuthGuard]
+    component: AccountInfoComponent,
+    pathMatch: 'full',
+    canActivate: [AuthGuard]
   },
   {
     path: 'admin-portal',
-    component: AdminPortalComponent,  canActivate: [AdminGuard]
+    component: AdminPortalComponent,
+    pathMatch: 'full',
+    canActivate: [AdminGuard]
   },
   {
     path: 'events',
-    component: EventPageComponent, canActivate: [AuthGuard]
+    component: EventPageComponent,
+    pathMatch: 'full',
+    canActivate: [AuthGuard]
   },
   {
     path: 'create-post',
-    component: CreatePostComponent,  canActivate: [AuthGuard]
+    component: CreatePostComponent, 
+    pathMatch: 'full',
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'posts',
+    component: PostPageComponent,
+    pathMatch: 'full',
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'post/:id',
+    component: PostComponent,
+    pathMatch: 'prefix',
+    canActivate: [AuthGuard]
   }
 ]
 

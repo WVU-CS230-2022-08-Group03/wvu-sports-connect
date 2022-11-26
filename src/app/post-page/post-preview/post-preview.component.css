@@ -1,0 +1,61 @@
+p {
+    margin: 0;
+}
+
+div.post-prvw {
+    background-color: rgba(210, 150, 30);
+    border-radius: 1rem;
+}
+
+div.post-prvw-body {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+div.evt-info {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex: 0 1 50%;
+}
+
+div.post-info {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    flex: 1 1 35%;
+}
+
+div.stats-info {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex: 1 1 15%;
+}
+
+div.evt-vis {
+    flex: 0 1 60%;
+}
+
+div.evt-st {
+    flex: 1 0 150px;
+}
+
+div.evt-loc, div.evt-time {
+    flex: 1 1;
+}
+
+div.evt-loc {
+    margin-bottom: 15px;
+}
+
+div.host, div.ptitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+div.eustats p, div.pcreate-time p {
+    float: right;
+}
