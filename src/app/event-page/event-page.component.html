@@ -1,0 +1,38 @@
+<app-topnavbar></app-topnavbar>
+
+      <div class="row ms-5 mt-3">
+        <div class="blog-top clearfix row">
+          <h1 class="pull-left">  Events <a href=""><i class="fa fa-rss"></i></a></h1>
+        </div>
+          <div class="row">
+        <div class="col-2"></div>
+
+        <div class = "row card-group">
+
+          <div class = "col-12" *ngFor="let x of items">
+              <a class = "nav-link" href="#">
+                <app-event-backend img = {{x.img}} cardTitle= {{x.cardTitle}} location = {{x.location}} time = {{x.time}} cardDesc= {{x.cardDesc}}>
+
+                </app-event-backend>
+              </a>
+          </div>
+      </div>
+        
+
+          <hr class="invis">
+          <div class="row ">
+          <div class="row align-items-md-center">
+            <div class="col-md-12">
+              <nav aria-label="Page navigation">
+                <ul class="pagination justify-content-start">
+                  <li class="page-item"><a class="page-link"style="background-color:#FFF2CC" href="">1</a></li>
+                  <li class="page-item"><a class="page-link" style="background-color:#FFF2CC"href="">2</a></li>
+                  <li class="page-item"><a class="page-link"style="background-color:#FFF2CC" href="">3</a></li>
+                  <li class="page-item"><a class="page-link"style="background-color:#FFF2CC" href="">Next</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="col-2"></div>
+      </div>

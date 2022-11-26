@@ -20,8 +20,9 @@ import { VerifyEmailComponent } from './AccountSystem/verify-email/verify-email.
 import { AccountInfoComponent } from './AccountSystem/account-info/account-info.component';
 import { AdminPortalComponent } from './admin-portal/admin-portal.component';
 import { CreatePostComponent } from './create-post/create-post.component';
-
-import { EventContentsComponent } from './event-contents/event-contents.component';
+import { HttpClientModule  } from '@angular/common/http';
+import { EventBackendComponent } from './event-backend/event-backend.component';
+import { EventPageComponent } from './event-page/event-page.component';
 
 
 
@@ -38,13 +39,14 @@ import { EventContentsComponent } from './event-contents/event-contents.componen
     AccountInfoComponent,
     AdminPortalComponent,
     CreatePostComponent,
-  
-    EventContentsComponent,
+       EventBackendComponent,
+       EventPageComponent,
       
 
 
   ],
   imports: [
+    
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
@@ -52,6 +54,7 @@ import { EventContentsComponent } from './event-contents/event-contents.componen
     AngularFirestoreModule,
     AngularFireStorageModule,
     AngularFireDatabaseModule,
+    HttpClientModule,
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
