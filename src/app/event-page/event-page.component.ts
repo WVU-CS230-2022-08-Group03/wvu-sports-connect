@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { EventService } from '../event-backend/event-service';
-import { AuthService } from '../AccountSystem/shared/services/auth.service';
 import { EventItemModel } from '../event-backend/eventlist';
 
 @Component({

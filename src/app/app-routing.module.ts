@@ -43,11 +43,11 @@ const routes: Routes = [
   },
   {
     path: 'events',
-    component: EventPageComponent, 
+    component: EventPageComponent, canActivate: [AuthGuard]
   },
   {
     path: 'create-post',
-    component: CreatePostComponent,  
+    component: CreatePostComponent,  canActivate: [AuthGuard]
   }
 ]
 
