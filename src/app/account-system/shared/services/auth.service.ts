@@ -45,7 +45,7 @@ export class AuthService {
             this.router.navigate(['admin-portal']);
           }
           else if (user) {
-            this.router.navigate(['homepage']);
+            this.router.navigate(['home']);
           }
           
 

@@ -16,7 +16,7 @@ import { PostComponent } from './post/post.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home', pathMatch: 'full'
+    redirectTo: 'sign-in', pathMatch: 'full'
   },
   {
     path:'home',
