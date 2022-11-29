@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "wvu-sports-connect": {
+      "hosting": {
+        "wvu-sports-connect-app": [
+          "wvu-sports-connect"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "wvu-sports-connect"
+  }
+}

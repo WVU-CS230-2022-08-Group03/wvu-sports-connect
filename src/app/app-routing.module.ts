@@ -12,6 +12,7 @@ import { CreatePostComponent } from './create-post/create-post.component';
 import { EventPageComponent } from './event-page/event-page.component';
 import { PostPageComponent } from './post-page/post-page.component';
 import { PostComponent } from './post/post.component';
+import { MessagesComponent } from './messages/messages/messages.component';
 
 const routes: Routes = [
   {
@@ -73,6 +74,12 @@ const routes: Routes = [
     path: 'post/:id',
     component: PostComponent,
     pathMatch: 'prefix',
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'messages',
+    component: MessagesComponent,
+    pathMatch: 'full',
     canActivate: [AuthGuard]
   }
 ]

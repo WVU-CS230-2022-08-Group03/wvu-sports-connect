@@ -1,0 +1,37 @@
+<app-topnavbar></app-topnavbar>
+<div class="container">
+  <div class="row">
+
+<div class="column">
+  <div class="card">
+    <div class="card-body">
+      {{userName}}
+    </div>  
+    <div class="card-body">
+      {{messageBody}}
+    </div>  
+</div>
+</div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-8">
+      <form #postForm = "ngForm" (ngSubmit)="addMessage(postForm.value)">
+        <div class="input-group">
+          <span class = "input-group-text">Name: </span>
+          <input type="text" class = "form-control" ngModel name = "userName">
+        </div>
+
+        <div class="input-group">
+          <span class = "input-group-text">Write your message here: </span>
+          <input type="text" class = "form-control" ngModel name = "messageBody">
+        </div>
+
+        <button class = "btn btn-dark" type = "submit">Send</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+</div>
