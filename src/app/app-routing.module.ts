@@ -17,7 +17,8 @@ import { MessagesComponent } from './messages/messages/messages.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'sign-in', pathMatch: 'full'
+    redirectTo: 'home',
+    pathMatch: 'full'
   },
   {
     path:'home',
