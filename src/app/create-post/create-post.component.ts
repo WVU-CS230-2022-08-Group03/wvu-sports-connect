@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { EventItemModel } from '../event-backend/eventlist';
+
 
 @Component({
   selector: 'app-create-post',

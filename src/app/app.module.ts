@@ -25,6 +25,11 @@ import { EventPageComponent } from './event-page/event-page.component';
 import { PostComponent } from './post/post.component';
 import { PostPageComponent } from './post-page/post-page.component';
 import { PostPreviewComponent } from './post-page/post-preview/post-preview.component';
+import { EventAddComponent } from './event-add/event-add.component';
+import { FormsModule } from '@angular/forms';
+import { FirestoreModule } from '@angular/fire/firestore';
+import { AngularFireDatabase } from "@angular/fire/compat/database";
+
 
 @NgModule({
   declarations: [
@@ -42,7 +47,8 @@ import { PostPreviewComponent } from './post-page/post-preview/post-preview.comp
     EventPageComponent,
     PostComponent,
     PostPageComponent,
-    PostPreviewComponent
+    PostPreviewComponent,
+    EventAddComponent
   ],
   imports: [
     BrowserModule,
@@ -53,6 +59,9 @@ import { PostPreviewComponent } from './post-page/post-preview/post-preview.comp
     AngularFireStorageModule,
     AngularFireDatabaseModule,
     HttpClientModule,
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
