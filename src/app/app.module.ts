@@ -35,6 +35,7 @@ import { EventAddComponent } from './event-add/event-add.component';
 import { FormsModule } from '@angular/forms';
 import { FirestoreModule } from '@angular/fire/firestore';
 import { AngularFireDatabase } from "@angular/fire/compat/database";
+import { PostBackendComponent } from './post-backend/post-backend.component';
 
 
 @NgModule({
@@ -56,6 +57,7 @@ import { AngularFireDatabase } from "@angular/fire/compat/database";
     PostPreviewComponent,
     EventAddComponent,
     MessagesComponent,
+    PostBackendComponent,
     
   ],
   imports: [

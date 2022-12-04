@@ -3,13 +3,13 @@ p {
 }
 
 div.content-super {
-    background-color: rgba(20, 20, 20);
+    background-color: #fff2cc;
     width: 100vw;
     min-height: 94.5vh;
 }
 
 div.content {
-    background-color: rgba(120, 150, 100, 0.5);
+    background-color: #fff2cc;
     min-height: 94.5vh;
     min-width: 500px;
     width: 65vw;

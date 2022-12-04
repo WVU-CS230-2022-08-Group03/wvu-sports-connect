@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { EventItemModel } from '../event-backend/eventlist';
+import { PostService } from '../post-backend/post-service';
+import { PostItemModel } from '../post-backend/postlist';
 
 
 @Component({
@@ -9,9 +10,13 @@ import { EventItemModel } from '../event-backend/eventlist';
 })
 export class CreatePostComponent implements OnInit {
 
-  constructor() { }
+  constructor(private ps:PostService) {}
 
   ngOnInit(): void {
+  }
+
+  addEvent(post: PostItemModel[]){
+    this.ps.addPost(post);
   }
 
 }
