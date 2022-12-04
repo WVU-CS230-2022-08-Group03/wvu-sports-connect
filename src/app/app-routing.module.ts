@@ -12,6 +12,7 @@ import { CreatePostComponent } from './create-post/create-post.component';
 import { EventPageComponent } from './event-page/event-page.component';
 import { PostPageComponent } from './post-page/post-page.component';
 import { PostComponent } from './post/post.component';
+import { MessagesComponent } from './messages/messages/messages.component';
 import { EventAddComponent } from './event-add/event-add.component';
 import { AuthService } from './account-system/shared/services/auth.service';
 
@@ -19,9 +20,8 @@ const routes: Routes = [
   {
 
     path: '',
-    redirectTo: 'sign-in', pathMatch: 'full'
-
-    
+    redirectTo: 'home',
+    pathMatch: 'full'
   },
   {
     path:'home',
@@ -78,6 +78,12 @@ const routes: Routes = [
     path: 'post/:id',
     component: PostComponent,
     pathMatch: 'prefix',
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'messages',
+    component: MessagesComponent,
+    pathMatch: 'full',
     canActivate: [AuthGuard]
   },
   {

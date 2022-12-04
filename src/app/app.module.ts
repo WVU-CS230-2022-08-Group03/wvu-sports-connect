@@ -25,6 +25,12 @@ import { EventPageComponent } from './event-page/event-page.component';
 import { PostComponent } from './post/post.component';
 import { PostPageComponent } from './post-page/post-page.component';
 import { PostPreviewComponent } from './post-page/post-preview/post-preview.component';
+import { MessagesComponent } from './messages/messages/messages.component';
+
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { provideDatabase,getDatabase } from '@angular/fire/database';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+
 import { EventAddComponent } from './event-add/event-add.component';
 import { FormsModule } from '@angular/forms';
 import { FirestoreModule } from '@angular/fire/firestore';
@@ -48,7 +54,9 @@ import { AngularFireDatabase } from "@angular/fire/compat/database";
     PostComponent,
     PostPageComponent,
     PostPreviewComponent,
-    EventAddComponent
+    EventAddComponent,
+    MessagesComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -59,6 +67,10 @@ import { AngularFireDatabase } from "@angular/fire/compat/database";
     AngularFireStorageModule,
     AngularFireDatabaseModule,
     HttpClientModule,
+    FormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideDatabase(() => getDatabase()),
+    provideFirestore(() => getFirestore()),
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule

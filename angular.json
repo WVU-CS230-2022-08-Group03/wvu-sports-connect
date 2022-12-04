@@ -94,6 +94,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "wvu-sports-connect-app:build:production",
+            "firebaseProject": "wvu-sports-connect",
+            "firebaseHostingSite": "wvu-sports-connect"
+          }
         }
       }
     }
