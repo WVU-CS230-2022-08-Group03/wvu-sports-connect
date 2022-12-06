@@ -1,37 +1,40 @@
 <app-topnavbar></app-topnavbar>
-<div class="container">
-  <div class="row">
+<div class="chat_window">
+  
+  <ul class="messages">
+    <div class = "col-6" *ngFor="let x of items">
+      <a class = "nav-link" href="#">
+        <app-message-backend userName = {{x.userName}} messageBody= {{x.messageBody}}>
 
-<div class="column">
-  <div class="card">
-    <div class="card-body">
-      {{userName}}
-    </div>  
-    <div class="card-body">
-      {{messageBody}}
-    </div>  
-</div>
-</div>
-</div>
+        </app-message-backend>
+        
 
-<div class="container">
-  <div class="row">
-    <div class="col-8">
-      <form #postForm = "ngForm" (ngSubmit)="addMessage(postForm.value)">
-        <div class="input-group">
-          <span class = "input-group-text">Name: </span>
-          <input type="text" class = "form-control" ngModel name = "userName">
-        </div>
+      </a>
+  </div>
+  </ul>
+  <div class="bottom_wrapper clearfix">
+    <form #postForm = "ngForm" (ngSubmit)="addMessage(postForm.value)">
+      <!-- <div class="input-group">
+        <span class = "input-group-text">Name: </span>
+        <input type="text" class = "form-control" ngModel name = "userName">
+      </div> -->
 
-        <div class="input-group">
-          <span class = "input-group-text">Write your message here: </span>
-          <input type="text" class = "form-control" ngModel name = "messageBody">
-        </div>
+      <div class="input-group">
+        
+        <input type="text" class = "form-control" ngModel name = "messageBody">
+      </div>
 
-        <button class = "btn btn-dark" type = "submit">Send</button>
-      </form>
-    </div>
+      <button class = "btn btn-dark" type = "submit">Send</button>
+    </form>
   </div>
 </div>
-
+<div class="message_template">
+  <li class="message">
+      <div class="avatar"></div>
+      <div class="text_wrapper">
+          <div class="text"></div>
+      </div>
+  </li>
 </div>
+
+
