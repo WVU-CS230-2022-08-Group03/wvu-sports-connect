@@ -7,11 +7,9 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
   styleUrls: ['./post.component.css']
 })
 export class PostComponent implements OnInit {
-  route: ActivatedRoute;
-  id: string | null;
+  private id: string | null;
   
-  constructor(route: ActivatedRoute) {
-    this.route = route;
+  constructor(private route: ActivatedRoute) {
     this.id = '';
   }
 

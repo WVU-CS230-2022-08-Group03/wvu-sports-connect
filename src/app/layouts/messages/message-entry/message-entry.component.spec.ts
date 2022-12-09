@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PostBackendComponent } from './post-backend.component';
+import { MessageEntryComponent } from './message-entry.component';
 
-describe('PostBackendComponent', () => {
-  let component: PostBackendComponent;
-  let fixture: ComponentFixture<PostBackendComponent>;
+describe('MessageEntryComponent', () => {
+  let component: MessageEntryComponent;
+  let fixture: ComponentFixture<MessageEntryComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PostBackendComponent ]
+      declarations: [ MessageEntryComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PostBackendComponent);
+    fixture = TestBed.createComponent(MessageEntryComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

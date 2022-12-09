@@ -26,8 +26,6 @@ export class PostPreviewComponent implements OnInit {
         this.create_date = "";
     }
     
-    ngOnInit(): void {
-    }
-
+    ngOnInit(): void {}
 }
 

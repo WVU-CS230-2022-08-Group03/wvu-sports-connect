@@ -10,7 +10,5 @@ export class AccountInfoComponent implements OnInit {
 
   constructor(public authService: AuthService) {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

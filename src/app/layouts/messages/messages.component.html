@@ -4,11 +4,7 @@
   <ul class="messages">
     <div class = "col-6" *ngFor="let x of items">
       <a class = "nav-link" href="#">
-        <app-message-backend userName = {{x.userName}} messageBody= {{x.messageBody}}>
-
-        </app-message-backend>
-        
-
+        <app-message-entry userName = {{x.userName}} messageBody= {{x.messageBody}}></app-message-entry>
       </a>
   </div>
   </ul>

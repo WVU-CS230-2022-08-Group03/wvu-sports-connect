@@ -8,7 +8,7 @@ import { AuthService } from 'src/app/common/services/auth.service';
 })
 export class HomepageComponent implements OnInit {
 
-  constructor(public authService: AuthService) {}
+  constructor() {}
 
   ngOnInit(): void {
   }

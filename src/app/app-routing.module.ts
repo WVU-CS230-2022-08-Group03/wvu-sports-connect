@@ -13,7 +13,7 @@ import { EventPageComponent } from './layouts/event-page/event-page.component';
 import { PostPageComponent } from './layouts/post-page/post-page.component';
 import { PostComponent } from './layouts/post/post.component';
 import { MessagesComponent } from './layouts/messages/messages.component';
-import { CreateEventComponent } from './layouts/create-event/create-event.component';
+import { CreateEventComponent } from './layouts/admin-portal/create-event/create-event.component';
 import { AuthService } from './common/services/auth.service';
 
 const routes: Routes = [

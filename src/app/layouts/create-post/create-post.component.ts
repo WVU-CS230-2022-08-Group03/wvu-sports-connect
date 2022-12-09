@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PostService } from 'src/app/post-backend/post-service';
-import { PostItemModel } from 'src/app/post-backend/postlist';
-
+import { PostItemModel } from 'src/app/common/models/post.model';
+import { DatabaseService } from 'src/app/common/services/database.service';
 
 @Component({
   selector: 'app-create-post',
@@ -10,13 +9,11 @@ import { PostItemModel } from 'src/app/post-backend/postlist';
 })
 export class CreatePostComponent implements OnInit {
 
-  constructor(private ps: PostService) {}
+  constructor(private dbs: DatabaseService) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  addPost(post: PostItemModel[]) {
+    this.dbs.addEntries("posts", [post]);
   }
-
-  addEvent(post: PostItemModel[]){
-    this.ps.addPost(post);
-  }
-
 }
