@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { EventService } from '../event-backend/event-service';
-import { EventItemModel } from '../event-backend/eventlist';
+import { EventService } from 'src/app/event-backend/event-service';
+import { EventItemModel } from 'src/app/event-backend/eventlist';
 
 @Component({
   selector: 'app-create-event',

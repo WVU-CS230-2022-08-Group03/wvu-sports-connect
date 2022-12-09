@@ -16,10 +16,8 @@ export class PostComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.route.params.subscribe( param => {
+    this.route.params.subscribe( (param) => {
       this.id = param['id'];
     });
-    console.log(this.id);
   }
-
 }

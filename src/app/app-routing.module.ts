@@ -1,20 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomepageComponent } from './homepage/homepage.component';
-import { LoginpageComponent } from './account-system/loginpage/loginpage.component';
-import { SignUpComponent } from './account-system/sign-up/sign-up.component';
-import { ForgotPasswordComponent } from './account-system/forgot-password/forgot-password.component';
-import { AuthGuard } from './account-system/shared/guard/auth.guard';
-import { AdminGuard } from './account-system/shared/guard/admin.guard';
-import { AccountInfoComponent } from './account-system/account-info/account-info.component';
-import { AdminPortalComponent } from './admin-portal/admin-portal.component';
-import { CreatePostComponent } from './create-post/create-post.component';
-import { EventPageComponent } from './event-page/event-page.component';
-import { PostPageComponent } from './post-page/post-page.component';
-import { PostComponent } from './post/post.component';
-import { MessagesComponent } from './messages/messages/messages.component';
-import { EventAddComponent } from './event-add/event-add.component';
-import { AuthService } from './account-system/shared/services/auth.service';
+import { HomepageComponent } from './layouts/homepage/homepage.component';
+import { LoginpageComponent } from './layouts/loginpage/loginpage.component';
+import { SignUpComponent } from './layouts/sign-up/sign-up.component';
+import { ForgotPasswordComponent } from './layouts/forgot-password/forgot-password.component';
+import { AuthGuard } from './common/guard/auth.guard';
+import { AdminGuard } from './common/guard/admin.guard';
+import { AccountInfoComponent } from './layouts/account-info/account-info.component';
+import { AdminPortalComponent } from './layouts/admin-portal/admin-portal.component';
+import { CreatePostComponent } from './layouts/create-post/create-post.component';
+import { EventPageComponent } from './layouts/event-page/event-page.component';
+import { PostPageComponent } from './layouts/post-page/post-page.component';
+import { PostComponent } from './layouts/post/post.component';
+import { MessagesComponent } from './layouts/messages/messages.component';
+import { CreateEventComponent } from './layouts/create-event/create-event.component';
+import { AuthService } from './common/services/auth.service';
 
 const routes: Routes = [
   {
@@ -51,7 +51,7 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: 'admin-portal',
+    path: 'admin',
     component: AdminPortalComponent,
     pathMatch: 'full',
     canActivate: [AdminGuard]
@@ -87,9 +87,9 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: 'addEvent',
-    component: EventAddComponent,
-    pathMatch: 'prefix',
+    path: 'admin/create-event',
+    component: CreateEventComponent,
+    pathMatch: 'full',
     canActivate: [AdminGuard]
   }
 ]

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../account-system/shared/services/auth.service';
+import { AuthService } from 'src/app/common/services/auth.service';
 
 @Component({
   selector: 'app-admin-portal',

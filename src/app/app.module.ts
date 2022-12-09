@@ -1,42 +1,55 @@
+// modules
+// * angular
+// ** standard
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { LoginpageComponent } from './account-system/loginpage/loginpage.component';
-import { HomepageComponent } from './homepage/homepage.component';
-import { TopnavbarComponent } from './topnavbar/topnavbar.component';
+// ** imports
+import { HttpClientModule } from '@angular/common/http';
+// ** firebase
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
-import { environment } from '../environments/environment';
-import { SignUpComponent } from './account-system/sign-up/sign-up.component';
-import { ForgotPasswordComponent } from './account-system/forgot-password/forgot-password.component';
-import { AuthService } from './account-system/shared/services/auth.service';
-import { VerifyEmailComponent } from './account-system/verify-email/verify-email.component';
-import { AccountInfoComponent } from './account-system/account-info/account-info.component';
-import { AdminPortalComponent } from './admin-portal/admin-portal.component';
-import { CreatePostComponent } from './create-post/create-post.component';
-import { HttpClientModule  } from '@angular/common/http';
-import { EventBackendComponent } from './event-backend/event-backend.component';
-import { EventPageComponent } from './event-page/event-page.component';
-import { PostComponent } from './post/post.component';
-import { PostPageComponent } from './post-page/post-page.component';
-import { PostPreviewComponent } from './post-page/post-preview/post-preview.component';
-import { MessagesComponent } from './messages/messages/messages.component';
-
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
-import { provideDatabase,getDatabase } from '@angular/fire/database';
-import { provideFirestore,getFirestore } from '@angular/fire/firestore';
-
-import { EventAddComponent } from './event-add/event-add.component';
-import { FormsModule } from '@angular/forms';
 import { FirestoreModule } from '@angular/fire/firestore';
 import { AngularFireDatabase } from "@angular/fire/compat/database";
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { provideDatabase, getDatabase } from '@angular/fire/database';
+import { provideFirestore, getFirestore } from '@angular/fire/firestore';
+
+// config
+import { environment } from 'src/environments/environment';
+
+// common
+// * services
+import { AuthService } from './common/services/auth.service';
+// * components
+import { TopnavbarComponent } from './common/components/topnavbar/topnavbar.component';
+
+// layouts
+import { AppComponent } from './app.component';
+import { LoginpageComponent } from './layouts/loginpage/loginpage.component';
+import { HomepageComponent } from './layouts/homepage/homepage.component';
+import { SignUpComponent } from './layouts/sign-up/sign-up.component';
+import { ForgotPasswordComponent } from './layouts/forgot-password/forgot-password.component';
+import { VerifyEmailComponent } from './layouts/verify-email/verify-email.component';
+import { AccountInfoComponent } from './layouts/account-info/account-info.component';
+import { AdminPortalComponent } from './layouts/admin-portal/admin-portal.component';
+import { CreatePostComponent } from './layouts/create-post/create-post.component';
+import { EventBackendComponent } from './event-backend/event-backend.component';
+import { EventPageComponent } from './layouts/event-page/event-page.component';
+import { PostComponent } from './layouts/post/post.component';
+import { PostPageComponent } from './layouts/post-page/post-page.component';
+import { MessagesComponent } from './layouts/messages/messages.component';
+import { CreateEventComponent } from './layouts/create-event/create-event.component';
+import { FormsModule } from '@angular/forms';
 import { PostBackendComponent } from './post-backend/post-backend.component';
 import { MessageBackendComponent } from './message-backend/message-backend.component';
+
+// subcomponents
+// * post-page
+import { PostPreviewComponent } from './layouts/post-page/post-preview/post-preview.component';
 
 
 @NgModule({
@@ -56,11 +69,10 @@ import { MessageBackendComponent } from './message-backend/message-backend.compo
     PostComponent,
     PostPageComponent,
     PostPreviewComponent,
-    EventAddComponent,
+    CreateEventComponent,
     MessagesComponent,
     PostBackendComponent,
-    MessageBackendComponent,
-    
+    MessageBackendComponent
   ],
   imports: [
     BrowserModule,

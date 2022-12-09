@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PostService } from '../post-backend/post-service';
-import { PostItemModel } from '../post-backend/postlist';
+import { PostService } from 'src/app/post-backend/post-service';
+import { PostItemModel } from 'src/app/post-backend/postlist';
 
 
 @Component({
@@ -10,7 +10,7 @@ import { PostItemModel } from '../post-backend/postlist';
 })
 export class CreatePostComponent implements OnInit {
 
-  constructor(private ps:PostService) {}
+  constructor(private ps: PostService) {}
 
   ngOnInit(): void {
   }
