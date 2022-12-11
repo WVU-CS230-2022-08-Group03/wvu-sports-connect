@@ -1,106 +1,61 @@
-p {
+p, h2, h3 {
     margin: 0;
 }
 
 div.content-super {
     background-color: #fff2cc;
+    min-height: 100vh;
     width: 100vw;
-    min-height: 94.5vh;
 }
 
 div.content {
-    background-color: #fff2cc;
-    min-height: 94.5vh;
     min-width: 500px;
-    width: 65vw;
-    overflow: hidden;
+    width: 57%;
     margin: 0 auto 0 auto;
+}
+
+div.posts {
+    padding: 0 2% 0 2%;
+    margin-top: 2rem;
+}
+
+div.posts-card {
+    border-radius: 0.8rem;
+    background-color: rgba(160, 160, 160);
+    min-height: 7rem;
+    height: 87vh;
+}
+
+div.posts-card-body {
+    padding: 1rem;
+    height: 100%;
 }
 
 div.posts-title {
     padding: 0 10% 0 10%;
-    margin-top: 2vh;
+}
+
+div.posts-title-card {
+    margin: 0 auto 0 auto;
+    width: fit-content;
+    border-radius: 0.7rem;
+    background-color: rgba(70, 70, 70);
+}
+
+div.posts-title-card-body {
+    padding: 0.5rem;
 }
 
 div.posts-title-h {
-    padding: 0 1% 0 1%;
+    padding: 0 0.5rem 0 0.5rem;
 }
 
-div.posts-title-h h2 {
-    margin: 0;
+div.posts-prvws-section {
+    margin-top: 1rem;
+    flex: 0 1 100%;
 }
 
-div.posts-prvw {
-    padding: 0 1% 0 1%;
-    margin-top: 2vh;
+div.posts-prvws-card {
+    height: 100%;
 }
 
-.posts-card-theme {
-    border-radius: 0.7rem;
-    background-color: rgba(48, 48, 48);
-}
-
-div.posts-prvw-card {
-    min-height: 800px;
-    height: 75vh;
-}
-
-div.post-prvw {
-    height: 16.5%;
-    border-radius: 1rem;
-    background-color: #FFE066;
-}
-
-div.posts-prvw-body {
-    overflow: hidden;
-    height: 10%;
-}
-
-.prvw-p-evt {
-    font-size: 13px;
-}
-
-.prvw-p-stat {
-    float: right;
-}
-
-div.evt-info {
-    width: 40%;
-}
-
-div.evt-st {
-    overflow: hidden;
-    float: right;
-    width: 30%;
-}
-
-div.evt-loc {
-    float: left;
-    margin: 0 0 10px 0;
-}
-
-div.evt-time {
-    float: left;
-}
-
-div.ptitle {
-}
-
-div.post-info {
-    width: 40%;
-}
-
-div.stats-info {
-    width: 20%;
-}
-
-div.stats-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-div.ptitle,div.host {
-    display: flex;
-    justify-content: center;
-}
