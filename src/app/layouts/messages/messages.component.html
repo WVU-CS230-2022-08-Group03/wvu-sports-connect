@@ -1,29 +1,41 @@
 <app-topnavbar></app-topnavbar>
-<div class="chat_window">
+
+<head>
+  <link rel="stylesheet" href="messages.component.css">
+</head>
+
+<h2>
+
+</h2>
+<h2>Messages</h2>
+<h6>To add to the Group Chat, type your message, press "Send", then press "Refresh Messages."</h6>
+
+<h1>
+
+</h1>
+<div class="chat_window" style="background-color: rgb(255, 241, 204);">
   
   <ul class="messages">
     <div class = "col-6" *ngFor="let x of items">
-      <a class = "nav-link" href="#">
+      <a class = "nav-link" href="#" style="border-style: outset;  border-radius: 15px 50px 30px 5px; border-color: rgb(0, 183, 255); background-color: rgb(97, 202, 251);">
         <app-message-entry userName = {{x.userName}} messageBody= {{x.messageBody}}></app-message-entry>
       </a>
   </div>
   </ul>
   <div class="bottom_wrapper clearfix">
     <form #postForm = "ngForm" (ngSubmit)="addMessage(postForm.value)">
-      <!-- <div class="input-group">
-        <span class = "input-group-text">Name: </span>
-        <input type="text" class = "form-control" ngModel name = "userName">
-      </div> -->
-
       <div class="input-group">
         
         <input type="text" class = "form-control" ngModel name = "messageBody">
       </div>
 
-      <button class = "btn btn-dark" type = "submit">Send</button>
+      <button class = "btn btn-primary" type = "submit">Send</button>
     </form>
+    <button class = "btn btn-primary" onClick="window.location.reload();">Refresh Messages</button>
+
   </div>
 </div>
+
 <div class="message_template">
   <li class="message">
       <div class="avatar"></div>
