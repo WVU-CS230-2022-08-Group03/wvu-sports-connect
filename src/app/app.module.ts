@@ -37,7 +37,7 @@ import { ForgotPasswordComponent } from './layouts/forgot-password/forgot-passwo
 import { VerifyEmailComponent } from './layouts/verify-email/verify-email.component';
 import { AccountInfoComponent } from './layouts/account-info/account-info.component';
 import { AdminPortalComponent } from './layouts/admin-portal/admin-portal.component';
-  import { CreateEventComponent } from './layouts/admin-portal/create-event/create-event.component';
+  import { CreateEventComponent } from './layouts/create-event/create-event.component';
 import { CreatePostComponent } from './layouts/create-post/create-post.component';
 import { EventPageComponent } from './layouts/event-page/event-page.component';
 import { PostComponent } from './layouts/post/post.component';

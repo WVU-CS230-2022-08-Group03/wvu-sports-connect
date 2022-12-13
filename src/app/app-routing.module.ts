@@ -13,8 +13,7 @@ import { EventPageComponent } from './layouts/event-page/event-page.component';
 import { PostPageComponent } from './layouts/post-page/post-page.component';
 import { PostComponent } from './layouts/post/post.component';
 import { MessagesComponent } from './layouts/messages/messages.component';
-import { CreateEventComponent } from './layouts/admin-portal/create-event/create-event.component';
-import { AuthService } from './common/services/auth.service';
+import { CreateEventComponent } from './layouts/create-event/create-event.component';
 
 const routes: Routes = [
   {
@@ -87,11 +86,19 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: 'admin/create-event',
+    path: 'admin-portal',
+    component: AdminPortalComponent,
+    pathMatch: 'full',
+    canActivate: [AdminGuard]
+
+  },
+  {
+    path: 'create-event',
     component: CreateEventComponent,
     pathMatch: 'full',
     canActivate: [AdminGuard]
-  }
+
+  },
 ]
 
 @NgModule({
