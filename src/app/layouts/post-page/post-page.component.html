@@ -9,12 +9,21 @@
                                 <h2>Featured Posts</h2>
                             </div>
                         </div>
+                        <div class = "row card-group">
+                            
+                        </div>
                     </div>
                 </div>
                 <div class="posts-prvws-section">
                     <div class="posts-prvws-card card">
-                        <div class="posts-prvws-card-body">
-                        </div>
+                        
+                            <div class = "posts-prvws-card-body mt-2" *ngFor="let x of items">
+                                <a class = "nav-link" href="#">
+                                    <app-post-preview cardTitle= {{x.cardTitle}} location = {{x.location}} time = {{x.time}} cardDesc= {{x.cardDesc}}></app-post-preview>
+                                </a>
+                                
+                            </div>
+                        
                     </div>
                 </div>
             </div>

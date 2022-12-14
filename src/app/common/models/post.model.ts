@@ -3,4 +3,6 @@ export interface PostItemModel{
     time: string;
     location: string;
     cardDesc: string;
+    date: string;
+    
 }
