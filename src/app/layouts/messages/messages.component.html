@@ -1,55 +1,38 @@
 <!--Include the site's top navigation bar-->
-<app-topnavbar></app-topnavbar>
-
-<!--Link CSS Style sheet-->
-<head>
-  <link rel="stylesheet" href="messages.component.css">
-</head>
-
-
-<!--Spacing and Welcome message.-->
-<h2>
-
-</h2>
-<h2>Messages</h2>
-<h6>To add to the Group Chat, type your message, press "Send".</h6>
-
-<!--Create the chat window component-->
-<div class="chat_window" style="background-color: rgb(255, 241, 204);">
-  
-  <!--Pull messages from the database using an *ngFor loop-->
-  <ul class="messages">
-    <div class = "col-10" *ngFor="let x of items">
-      <a class = "nav-link" href="#" style="border-style: outset;  border-radius: 15px 50px 30px 5px; border-color: rgb(0, 183, 255); background-color: rgb(97, 202, 251);">
-        <app-message-entry userName = {{x.userName}} messageBody= {{x.messageBody}}></app-message-entry>
-      </a>
-  </div>
-  </ul>
-
-  <!--Below the chat window, use an Angular Form to allow users to post new content-->
-  <div class="bottom_wrapper clearfix">
-    <form #postForm = "ngForm" (ngSubmit)="addMessage(postForm.value)">
-      <div class="input-group">
-        
-        <input type="text" class = "form-control" ngModel name = "messageBody">
-      </div>
-
-      <!--Send button hides the reload command to resolve the duplicate message bug-->
-      <button class = "btn btn-primary" type = "submit" onClick="window.location.reload();">Send</button>
-    </form>
-    
-  </div>
-
-</div>
-
-<!--Class for the message template-->
-<div class="message_template">
-  <li class="message">
-      <div class="avatar"></div>
-      <div class="text_wrapper">
-          <div class="text"></div>
-      </div>
-  </li>
-</div>
-
+<app-content-wpr>
+    <!--Welcome message.-->
+    <h2>Messages</h2>
+    <p>To add to the Group Chat, type your message and then press "Send".</p>
+    <!--Create the chat window component-->
+    <div class="chat_window">
+        <!--Message entries created via an *ngFor loop-->
+        <ul class="messages">
+            <div class="col-10" *ngFor="let x of items">
+                <a class="nav-link" href="#" style="border-style: outset;  border-radius: 15px 50px 30px 5px; border-color: rgb(0, 183, 255); background-color: rgb(97, 202, 251);">
+                    <app-message-entry [userName]=x.userName [messageBody]=x.messageBody></app-message-entry>
+                </a>
+            </div>
+        </ul>
+        <!--Angular Form for message submission-->
+        <div class="bottom_wrapper clearfix">
+        <form #postForm = "ngForm" (ngSubmit)="addMessage(postForm.value)">
+            <div class="input-group">
+                <input type="text" class = "form-control" ngModel name = "messageBody">
+            </div>
+            <!--Send button hides the reload command to resolve the duplicate message bug-->
+            <button class = "btn btn-primary" type = "submit" onClick="window.location.reload();">Send</button>
+        </form>
+    </div>
+    <!--Class for the message template-->
+    <div class="message_template">
+        <li class="message">
+            <div class="avatar">
+            </div>
+            <div class="text_wrapper">
+                <div class="text">
+                </div>
+            </div>
+        </div>
+    </div>
+</app-content-wpr>
 

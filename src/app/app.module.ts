@@ -49,6 +49,7 @@ import { MessagesComponent } from './layouts/messages/messages.component';
 import { PostPreviewComponent } from './layouts/post-page/post-preview/post-preview.component';
 import { EventEntryComponent } from './layouts/event-page/event-entry/event-entry.component';
 import { MessageEntryComponent } from './layouts/messages/message-entry/message-entry.component';
+import { ContentWprComponent } from './common/components/content-wpr/content-wpr.component';
 
 
 @NgModule({
@@ -70,7 +71,8 @@ import { MessageEntryComponent } from './layouts/messages/message-entry/message-
     CreateEventComponent,
     MessagesComponent,
     EventEntryComponent,
-    MessageEntryComponent
+    MessageEntryComponent,
+    ContentWprComponent
   ],
   imports: [
     BrowserModule,
