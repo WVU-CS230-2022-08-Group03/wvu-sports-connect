@@ -4,13 +4,14 @@
             <h1 class="pull-left">Events</h1>
         </div>
         <div class="row">
-            <div class="col-2">
+            <div class="col-12">
             </div>
             <div class = "row card-group">
-                <div class = "col-12" *ngFor="let x of items">
+                <div class = "col-12 mt-3" *ngFor="let x of items">
                     <a class = "nav-link" href="#">
                         <app-event-entry img = {{x.img}} cardTitle= {{x.cardTitle}} location = {{x.location}} time = {{x.time}} cardDesc= {{x.cardDesc}}></app-event-entry>
                     </a>
+                    
                 </div>
             </div>
             <hr class="invis">
@@ -28,7 +29,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-2"></div>
+        
         </div>
     </div>
 </app-content-wpr>
