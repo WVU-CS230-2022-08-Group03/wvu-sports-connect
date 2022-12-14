@@ -21,10 +21,10 @@ div.userpic-bd {
     overflow: hidden;
     background-color: rgba(255, 255, 255);
     min-height: 64px;
-    height: 10rem;
+    height: 10vw;
     max-height: 256px;
     min-width: 64px;
-    width: 10rem;
+    width: 10vw;
     max-width: 256px;
     border: 0.3rem solid rgba(0, 0, 0);
     border-radius: 50%;
