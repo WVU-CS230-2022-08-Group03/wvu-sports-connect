@@ -1,0 +1,19 @@
+.outer-card.card {
+    border: none;
+    border-radius: 0.8rem;
+    background-color: rgba(240, 240, 240);
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.title-card.card {
+    margin: 0 auto 0 auto;
+    width: fit-content;
+    border: none;
+    border-radius: 0.7rem;
+    background-color: rgba(180, 180, 180);
+}
+
+.sub-card.card {
+    border: none;
+    box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.15);
+}
