@@ -14,20 +14,8 @@
                 <div class="events-list-section">
                     <div class="events-list-card sub-card card">
                         <div class="events-list-card-body">
-                            <div class="event-entry-container">
-                                <div class="eve-wpr" *ngFor="let x of items">
-                                    <app-event-entry [img]="x.img" [cardTitle]="x.cardTitle" [location]="x.location" [time]="x.time" [cardDesc]="x.cardDesc"></app-event-entry>
-                                </div>
-                            </div>
-                            <div class="events-pagenav">             
-                                <nav aria-label="Page navigation">
-                                    <ul class="events-pagenav-list pagination justify-content-start">
-                                        <li class="page-item"><a class="page-link" href="">1</a></li>
-                                        <li class="page-item"><a class="page-link" href="">2</a></li>
-                                        <li class="page-item"><a class="page-link" href="">3</a></li>
-                                        <li class="page-item"><a class="page-link" href="">Next</a></li>
-                                    </ul>
-                                </nav>
+                            <div class="eve-wpr" *ngFor="let x of items">
+                                <app-event-entry [img]="x.img" [cardTitle]="x.cardTitle" [location]="x.location" [time]="x.time" [cardDesc]="x.cardDesc"></app-event-entry>
                             </div>
                         </div>
                     </div>

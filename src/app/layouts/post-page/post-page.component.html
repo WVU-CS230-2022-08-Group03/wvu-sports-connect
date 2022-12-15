@@ -15,7 +15,9 @@
                     <div class="posts-prvws-card sub-card card"> 
                         <div class="posts-prvws-card-body">
                             <a class="nav-link" href="#">
-                                <app-post-preview *ngFor="let x of items" [cardTitle]="x.cardTitle" [location]="x.location" [time]="x.time" [cardDesc]="x.cardDesc"></app-post-preview>
+                                <div class="pprv-wpr" *ngFor="let x of items">
+                                    <app-post-preview [cardTitle]="x.cardTitle" [location]="x.location" [time]="x.time" [cardDesc]="x.cardDesc"></app-post-preview>
+                                </div>
                             </a>
                         </div>
                     </div>
