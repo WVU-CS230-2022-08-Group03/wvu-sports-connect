@@ -11,6 +11,10 @@ div.event-entry-container {
     margin-bottom: 0.5rem;
 }
 
+div.eve-wpr {
+    margin-bottom: 0.5rem; 
+}
+
 ul.events-pagenav-list li a {
     color: rgba(50, 50, 50);
     background-color: rgba(255, 230, 150);

@@ -15,7 +15,9 @@
                     <div class="events-list-card sub-card card">
                         <div class="events-list-card-body">
                             <div class="event-entry-container">
-                                <app-event-entry *ngFor="let x of items" [img]="x.img" [cardTitle]="x.cardTitle" [location]="x.location" [time]="x.time" [cardDesc]="x.cardDesc"></app-event-entry>
+                                <div class="eve-wpr" *ngFor="let x of items">
+                                    <app-event-entry [img]="x.img" [cardTitle]="x.cardTitle" [location]="x.location" [time]="x.time" [cardDesc]="x.cardDesc"></app-event-entry>
+                                </div>
                             </div>
                             <div class="events-pagenav">             
                                 <nav aria-label="Page navigation">
