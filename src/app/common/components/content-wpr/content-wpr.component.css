@@ -1,11 +1,14 @@
 div.content-super {
-    background-color: #fff2cc;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(rgba(70, 150, 180), rgba(230, 200, 100) 14rem);
     min-height: 100vh;
     width: 100vw;
 }
 
 div.content {
     min-width: 500px;
-    width: 57%;
+    flex: 1 0 100%;
+    width: 56%;
     margin: 0 auto 0 auto;
 }

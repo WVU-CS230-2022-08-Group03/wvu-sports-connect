@@ -1,50 +1,13 @@
 div.posts {
-    padding: 0 2% 0 2%;
-    margin-top: 2rem;
-}
-
-div.posts-card {
-    border: none;
-    border-radius: 0.8rem;
-    background-color: rgba(240, 240, 240);
-    min-height: 7rem;
-    height: 87vh;
-    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.15);
-}
-
-div.posts-card-body {
-    padding: 1rem;
+    min-height: 20rem;
     height: 100%;
-}
-
-div.posts-title {
-    padding: 0 10% 0 10%;
-}
-
-div.posts-title-card {
-    margin: 0 auto 0 auto;
-    width: fit-content;
-    border: none;
-    border-radius: 0.7rem;
-    background-color: rgba(180, 180, 180);
-}
-
-div.posts-title-card-body {
-    padding: 0.5rem;
-}
-
-div.posts-title-h {
-    padding: 0 0.5rem 0 0.5rem;
 }
 
 div.posts-prvws-section {
-    margin-top: 1rem;
-    flex: 0 1 100%;
+    margin-top: 2rem;
 }
 
-div.posts-prvws-card {
-    height: 100%;
-    border: none;
-    background-color: #f0f0f0;
+div.posts-prvws-card-body {
+    padding: 1rem;
 }
 

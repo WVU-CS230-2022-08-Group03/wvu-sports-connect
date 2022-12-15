@@ -1,35 +1,44 @@
 <!--Include the site's top navigation bar-->
 <app-content-wpr>
-    <!--Welcome message.-->
-    <h2>Messages</h2>
-    <p>To add to the Group Chat, type your message and then press "Send".</p>
-    <!--Create the chat window component-->
-    <div class="chat_window">
-        <!--Message entries created via an *ngFor loop-->
-        <ul class="messages">
-            <div class="col-10" *ngFor="let x of items">
-                <a class="nav-link" href="#" style="border-style: outset;  border-radius: 15px 50px 30px 5px; border-color: rgb(0, 183, 255); background-color: rgb(97, 202, 251);">
-                    <app-message-entry [userName]=x.userName [messageBody]=x.messageBody></app-message-entry>
-                </a>
-            </div>
-        </ul>
-        <!--Angular Form for message submission-->
-        <div class="bottom_wrapper clearfix">
-        <form #postForm = "ngForm" (ngSubmit)="addMessage(postForm.value)">
-            <div class="input-group">
-                <input type="text" class = "form-control" ngModel name = "messageBody">
-            </div>
-            <!--Send button hides the reload command to resolve the duplicate message bug-->
-            <button class = "btn btn-primary" type = "submit" onClick="window.location.reload();">Send</button>
-        </form>
-    </div>
-    <!--Class for the message template-->
-    <div class="message_template">
-        <li class="message">
-            <div class="avatar">
-            </div>
-            <div class="text_wrapper">
-                <div class="text">
+    <div class="messages outer-section-pad">
+        <div class="messages-card outer-card card">
+            <div class="messages-card-body outer-card-body-pad">
+                <div class="messages-title title-pad">
+                    <div class="messages-title-card title-card card">
+                        <div class="messages-title-card-body title-card-body-pad">
+                            <div class="messages-title-h title-h-pad">
+                                <h2>Messages</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="messages-section">
+                    <!--Chat window-->
+                    <div class="chat-card sub-card card">
+                        <div class="messages-tut d-flex justify-content-center">
+                            <p>To add to the Group Chat, type your message and then press "Send".</p>
+                        </div>
+                        <div class="chat-list-card sub-card card">
+                            <!--Message entries created via an *ngFor loop-->
+                            <ul class="messages-list">
+                                <div class="message-bubble" *ngFor="let x of items">
+                                    <a class="nav-link" href="#">
+                                        <app-message-entry [userName]=x.userName [messageBody]=x.messageBody></app-message-entry>
+                                    </a>
+                                </div>
+                            </ul>
+                        </div>
+                        <!--Angular Form for message submission-->
+                        <div class="message-form">
+                            <form #postForm="ngForm" (ngSubmit)="addMessage(postForm.value)">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" ngModel name="messageBody">
+                                </div>
+                                <!--Send button hides the reload command to resolve the duplicate message bug-->
+                                <button class="message-send btn btn-primary" type="submit" onClick="window.location.reload();">Send</button>
+                           </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,11 +1,11 @@
-.outer-card.card {
+div.outer-card.card {
     border: none;
     border-radius: 0.8rem;
     background-color: rgba(240, 240, 240);
     box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.15);
 }
 
-.title-card.card {
+div.title-card.card {
     margin: 0 auto 0 auto;
     width: fit-content;
     border: none;
@@ -13,7 +13,27 @@
     background-color: rgba(180, 180, 180);
 }
 
-.sub-card.card {
+div.sub-card.card {
     border: none;
     box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.15);
+}
+
+div.outer-section-pad {
+    padding: 2rem 2% 0 2%;
+}
+
+div.outer-card-body-pad {
+    padding: 1rem 3rem 1rem 3rem;
+}
+
+div.title-pad {
+    padding: 0 10% 0 10%;
+}
+
+div.title-card-body-pad {
+    padding: 0.5rem;
+}
+
+div.title-h-pad {
+    padding: 0 0.5rem 0 0.5rem;
 }

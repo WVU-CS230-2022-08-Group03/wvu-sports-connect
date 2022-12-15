@@ -1,29 +1,23 @@
 <app-content-wpr>
-    <div class="posts">
-        <div class="posts-card card">
-            <div class="posts-card-body d-flex flex-column">
-                <div class="posts-title">
-                    <div class="posts-title-card card text-white">
-                        <div class="posts-title-card-body">
-                            <div class="posts-title-h">
+    <div class="posts outer-section-pad">
+        <div class="posts-card outer-card card">
+            <div class="posts-card-body outer-card-body-pad">
+                <div class="posts-title title-pad">
+                    <div class="posts-title-card title-card card">
+                        <div class="posts-title-card-body title-card-body-pad">
+                            <div class="posts-title-h title-h-pad">
                                 <h2>Featured Posts</h2>
                             </div>
-                        </div>
-                        <div class = "row card-group">
-                            
                         </div>
                     </div>
                 </div>
                 <div class="posts-prvws-section">
-                    <div class="posts-prvws-card card">
-                        
-                            <div class = "posts-prvws-card-body mt-2" *ngFor="let x of items">
-                                <a class = "nav-link" href="#">
-                                    <app-post-preview cardTitle= {{x.cardTitle}} location = {{x.location}} time = {{x.time}} cardDesc= {{x.cardDesc}}></app-post-preview>
-                                </a>
-                                
-                            </div>
-                        
+                    <div class="posts-prvws-card sub-card card"> 
+                        <div class="posts-prvws-card-body">
+                            <a class="nav-link" href="#">
+                                <app-post-preview *ngFor="let x of items" [cardTitle]="x.cardTitle" [location]="x.location" [time]="x.time" [cardDesc]="x.cardDesc"></app-post-preview>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
